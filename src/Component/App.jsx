@@ -35,13 +35,16 @@ const styles = theme => ({
     marginTop: theme.spacing(3),
   },
   footer: {
-    marginTop: theme.spacing(17),
-    marginLeft: theme.spacing(-1)
+    position: "fixed",
+    bottom: 0,
+    textAlign: "center",
+    padding: 20,
+    
   },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    display: 'flex',
+    // display: 'flex',
   },
   drawerPaper: {
     width: drawerWidth,
@@ -150,13 +153,12 @@ class App extends React.Component {
               </ListItem>
             </List>
           </div>
-
+        < div className={classes.footer}>
           <Grid
             container
             direction="row"
             justify="center"
             alignItems="flex-end"
-            className={classes.footer}
           >
             <Badge color="secondary" badgeContent={2} style={{ color: "white", marginRight: 20,marginBottom:10 }}>
               <NotificationsIcon />
@@ -166,7 +168,7 @@ class App extends React.Component {
             <Divider orientation="vertical" flexItem />
             <Avatar style={{ marginLeft: 20 }}>H</Avatar>
           </Grid>
-
+          </div>
         </Drawer>
         <App1 />
       </div>
