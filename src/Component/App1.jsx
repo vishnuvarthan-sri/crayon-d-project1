@@ -32,7 +32,7 @@ const styles = theme => ({
         width: 650,
     },
     table1: {
-        width: 870,
+        width: 685,
     },
     paper: {
         padding: theme.spacing(3),
@@ -106,8 +106,9 @@ const styles = theme => ({
 
     },
     leftside1: {
-        marginTop: theme.spacing(2),
-        marginLeft: theme.spacing(-17)
+        flexGrow: 1,
+        marginTop: theme.spacing(3),
+        marginLeft: theme.spacing(6)
     },
     screenshot: {
         width: '110%',
@@ -142,6 +143,8 @@ class App1 extends React.Component {
             <div className={classes.root}>
                 <CssBaseline />
                 <div className={classes.text}>
+                    <Grid container direction="row">
+                        <Grid item>
                     <Select
                         value={this.state.value}
                         displayEmpty
@@ -150,7 +153,8 @@ class App1 extends React.Component {
                         <MenuItem value={1}></MenuItem>
                         <MenuItem value={2}></MenuItem>
                     </Select>
-
+                    </Grid>
+                    <Grid item>
                     <Button
                         variant="outlined"
                         color="primary"
@@ -159,6 +163,8 @@ class App1 extends React.Component {
                     >
                         Add Project
                     </Button>
+                    </Grid>
+                    </Grid>
                     <Divider style={{ marginTop: 20 }} />
                     <Grid container direction="row">
                         <Grid item >
@@ -312,9 +318,12 @@ class App1 extends React.Component {
                                 </Grid>
                             </div>
                         </Grid>
-                        <div >
-                            <Divider orientation="vertical" className={classes.Vdivider} />
+                        <div>
+                            <Divider orientation="vertical"/>
                         </div>
+                        {/* <div >
+                            <Divider orientation="vertical" className={classes.Vdivider} />
+                        </div> */}
                         <Grid item>
                             <div className={classes.leftside1}>
                             <Typography variant="h1" style={{ fontSize: 20,marginBottom:20 }}> Screenshots</Typography>
