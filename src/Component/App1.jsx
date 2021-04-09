@@ -37,12 +37,11 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     view: {
-        marginLeft: theme.spacing(45)
+        marginLeft: theme.spacing(40)
     },
     Vdivider: {
-        marginLeft: theme.spacing(90),
-        height: 850,
-        marginTop: theme.spacing(-96.5)
+        marginLeft: theme.spacing(-23),
+        
     },
     horizon: {
         float: "right",
@@ -186,7 +185,7 @@ class App1 extends React.Component {
                             </div>
 
                         </Grid>
-                        <div style={{ marginLeft: 7 }}>
+                        <div style={{ marginLeft: 20}}>
                             <Divider orientation="vertical" />
                         </div>
                         <Grid item>
@@ -299,12 +298,11 @@ class App1 extends React.Component {
                                             </Paper>
                                         </Grid>
                                     </Grid>
-
                                 </Grid>
                             </div>
                         </Grid>
-                        <div>
-                            <Divider orientation="vertical" style={{marginLeft:-158}} />
+                        <div >
+                            <Divider orientation="vertical" className={classes.Vdivider} />
                         </div>
                         <Grid item>
                             <div className={classes.leftside1}>
