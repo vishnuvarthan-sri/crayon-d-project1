@@ -21,6 +21,7 @@ const styles = theme => ({
         display: 'flex',
     },
     text: {
+        flexGrow: 1,
         marginLeft: theme.spacing(5),
         marginTop: theme.spacing(5)
     },
