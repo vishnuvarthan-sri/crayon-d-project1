@@ -31,6 +31,9 @@ const styles = theme => ({
     table: {
         width: 650,
     },
+    table1: {
+        width: 870,
+    },
     paper: {
         padding: theme.spacing(3),
         textAlign: 'center',
@@ -267,7 +270,7 @@ class App1 extends React.Component {
                     </div>
                     <Grid container direction="row">
                         <Grid item>
-                            <div>
+                            <div className={classes.table1}>
                             <Typography variant="h1" style={{ fontSize: 20,marginTop:20 }}> To-Do lists</Typography>
                                 <Grid container spacing={1} className={classes.grid}>
                                     <Grid container spacing={2} direction="row" className={classes.grid2}>
