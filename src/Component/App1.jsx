@@ -1,6 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { Paper, withStyles, Grid, Button,Avatar,List, ListItem, ListItemText, ListItemAvatar, ListItemSecondaryAction, Divider, Select, MenuItem, Typography } from '@material-ui/core';
+import { Paper, withStyles, Grid, Button, Avatar, List, ListItem, ListItemText, ListItemAvatar, ListItemSecondaryAction, Divider, Select, MenuItem, Typography } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -45,7 +45,7 @@ const styles = theme => ({
     },
     Vdivider: {
         marginLeft: theme.spacing(-23),
-        
+
     },
     horizon: {
         float: "right",
@@ -102,7 +102,7 @@ const styles = theme => ({
     },
     pdfbutton1: {
         marginTop: theme.spacing(3),
-        marginLeft:theme.spacing(5),
+        marginLeft: theme.spacing(5),
         width: 300,
 
     },
@@ -146,25 +146,25 @@ class App1 extends React.Component {
                 <div className={classes.text}>
                     <Grid container direction="row">
                         <Grid item>
-                    <Select
-                        value={this.state.value}
-                        displayEmpty
-                    >
-                        <MenuItem value="">Design Task</MenuItem>
-                        <MenuItem value={1}></MenuItem>
-                        <MenuItem value={2}></MenuItem>
-                    </Select>
-                    </Grid>
-                    <Grid item>
-                    <Button
-                        variant="outlined"
-                        color="primary"
-                        className={classes.button}
-                        startIcon={<AddIcon />}
-                    >
-                        Add Project
+                            <Select
+                                value={this.state.value}
+                                displayEmpty
+                            >
+                                <MenuItem value="">Design Task</MenuItem>
+                                <MenuItem value={1}></MenuItem>
+                                <MenuItem value={2}></MenuItem>
+                            </Select>
+                        </Grid>
+                        <Grid item>
+                            <Button
+                                variant="outlined"
+                                color="primary"
+                                className={classes.button}
+                                startIcon={<AddIcon />}
+                            >
+                                Add Project
                     </Button>
-                    </Grid>
+                        </Grid>
                     </Grid>
                     <Divider style={{ marginTop: 20 }} />
                     <Grid container direction="row">
@@ -203,13 +203,13 @@ class App1 extends React.Component {
                             </div>
 
                         </Grid>
-                        <div style={{ marginLeft: 20}}>
+                        <div style={{ marginLeft: 20 }}>
                             <Divider orientation="vertical" />
                         </div>
                         <Grid item>
 
                             <div className={classes.root1}>
-                                <Typography variant="h1" style={{ fontSize: 20,marginBottom:15 }}> Report</Typography>
+                                <Typography variant="h1" style={{ fontSize: 20, marginBottom: 15 }}> Report</Typography>
                                 <Paper className={classes.paper1} elevation={3} >
                                     <Grid container spacing={2}>
                                         <Grid item style={{ marginTop: 12 }}>
@@ -273,12 +273,12 @@ class App1 extends React.Component {
                         </Grid>
                     </Grid>
                     <div>
-                        <Divider/>
+                        <Divider />
                     </div>
                     <Grid container direction="row">
                         <Grid item>
                             <div className={classes.table1}>
-                            <Typography variant="h1" style={{ fontSize: 20,marginTop:20 }}> To-Do lists</Typography>
+                                <Typography variant="h1" style={{ fontSize: 20, marginTop: 20 }}> To-Do lists</Typography>
                                 <Grid container spacing={1} className={classes.grid}>
                                     <Grid container spacing={2} direction="row" className={classes.grid2}>
                                         <Grid item style={{ marginTop: 15 }}>
@@ -320,50 +320,50 @@ class App1 extends React.Component {
                             </div>
                         </Grid>
                         <div>
-                            <Divider orientation="vertical"/>
+                            <Divider orientation="vertical" />
                         </div>
                         {/* <div >
                             <Divider orientation="vertical" className={classes.Vdivider} />
                         </div> */}
                         <Grid item>
                             <div className={classes.leftside1}>
-                            <Typography variant="h1" style={{ fontSize: 20,marginBottom:20 }}> Screenshots</Typography>
-                    <List className={classes.screenshot}>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-            <PanoramaOutlinedIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="shots_1_attach_1.png" secondary="Jan 9, 2014" />
-        <ListItemSecondaryAction>
-            <Button variant="outlined" color="primary" size="small">view</Button>
-        </ListItemSecondaryAction>
-      </ListItem>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-            <PanoramaOutlinedIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="shots_1_attach_3.png" secondary="Jan 7, 2014" />
-        <ListItemSecondaryAction>
-            <Button variant="outlined" color="primary" size="small">view</Button>
-        </ListItemSecondaryAction>
-      </ListItem>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-            <VideocamOutlinedIcon/>
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Screen_record_12.mov" secondary="July 20, 2014" />
-        <ListItemSecondaryAction>
-            <Button variant="contained" style={{background:"blue",color:"whitesmoke"}} size="small">play</Button>
-        </ListItemSecondaryAction>
-      </ListItem>
-    </List>
-    <Button variant="outlined" color="primary"  className={classes.pdfbutton1} size="large">View All</Button>
+                                <Typography variant="h1" style={{ fontSize: 20, marginBottom: 20 }}> Screenshots</Typography>
+                                <List className={classes.screenshot}>
+                                    <ListItem>
+                                        <ListItemAvatar>
+                                            <Avatar>
+                                                <PanoramaOutlinedIcon />
+                                            </Avatar>
+                                        </ListItemAvatar>
+                                        <ListItemText primary="shots_1_attach_1.png" secondary="Jan 9, 2014" />
+                                        <ListItemSecondaryAction>
+                                            <Button variant="outlined" color="primary" size="small">view</Button>
+                                        </ListItemSecondaryAction>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemAvatar>
+                                            <Avatar>
+                                                <PanoramaOutlinedIcon />
+                                            </Avatar>
+                                        </ListItemAvatar>
+                                        <ListItemText primary="shots_1_attach_3.png" secondary="Jan 7, 2014" />
+                                        <ListItemSecondaryAction>
+                                            <Button variant="outlined" color="primary" size="small">view</Button>
+                                        </ListItemSecondaryAction>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemAvatar>
+                                            <Avatar>
+                                                <VideocamOutlinedIcon />
+                                            </Avatar>
+                                        </ListItemAvatar>
+                                        <ListItemText primary="Screen_record_12.mov" secondary="July 20, 2014" />
+                                        <ListItemSecondaryAction>
+                                            <Button variant="contained" style={{ background: "blue", color: "whitesmoke" }} size="small">play</Button>
+                                        </ListItemSecondaryAction>
+                                    </ListItem>
+                                </List>
+                                <Button variant="outlined" color="primary" className={classes.pdfbutton1} size="large">View All</Button>
                             </div>
                         </Grid>
                     </Grid>
