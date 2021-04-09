@@ -102,51 +102,51 @@ class App extends React.Component {
               </ListItem>
               <ListItem button>
                 <ListItemIcon>
-                  <AvTimerIcon style={{ color: "grey" }} />
+                  <AvTimerIcon style={{ color: "lightgrey" }} />
                 </ListItemIcon>
-                <ListItemText style={{ color: "grey" }} primary="Timesheet" />
+                <ListItemText style={{ color: "lightgrey" }} primary="Timesheet" />
               </ListItem>
               <ListItem button>
                 <ListItemIcon>
-                  <MultilineChartIcon style={{ color: "grey" }} />
+                  <MultilineChartIcon style={{ color: "lightgrey" }} />
                 </ListItemIcon>
-                <ListItemText style={{ color: "grey" }} primary="Activity" />
-              </ListItem>
-            </List>
-            <Divider className={classes.divider} />
-            <List>
-              <ListItem button>
-                <ListItemIcon>
-                  <ListAltIcon style={{ color: "grey" }} />
-                </ListItemIcon>
-                <ListItemText style={{ color: "grey" }} primary="To-Do" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <EventAvailableIcon style={{ color: "grey" }} />
-                </ListItemIcon>
-                <ListItemText style={{ color: "grey" }} primary="Invoices" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <FolderOpenIcon style={{ color: "grey" }} />
-                </ListItemIcon>
-                <ListItemText style={{ color: "grey" }} primary="Projects" />
+                <ListItemText style={{ color: "lightgrey" }} primary="Activity" />
               </ListItem>
             </List>
             <Divider className={classes.divider} />
             <List>
               <ListItem button>
                 <ListItemIcon>
-                  <HelpOutlineIcon style={{ color: "grey" }} />
+                  <ListAltIcon style={{ color: "lightgrey" }} />
                 </ListItemIcon>
-                <ListItemText style={{ color: "grey" }} primary="Help" />
+                <ListItemText style={{ color: "lightgrey" }} primary="To-Do" />
               </ListItem>
               <ListItem button>
                 <ListItemIcon>
-                  <GetAppIcon style={{ color: "grey" }} />
+                  <EventAvailableIcon style={{ color: "lightgrey" }} />
                 </ListItemIcon>
-                <ListItemText style={{ color: "grey" }} primary="Download App" />
+                <ListItemText style={{ color: "lightgrey" }} primary="Invoices" />
+              </ListItem>
+              <ListItem button>
+                <ListItemIcon>
+                  <FolderOpenIcon style={{ color: "lightgrey" }} />
+                </ListItemIcon>
+                <ListItemText style={{ color: "lightgrey" }} primary="Projects" />
+              </ListItem>
+            </List>
+            <Divider className={classes.divider} />
+            <List>
+              <ListItem button>
+                <ListItemIcon>
+                  <HelpOutlineIcon style={{ color: "lightgrey" }} />
+                </ListItemIcon>
+                <ListItemText style={{ color: "lightgrey" }} primary="Help" />
+              </ListItem>
+              <ListItem button>
+                <ListItemIcon>
+                  <GetAppIcon style={{ color: "lightgrey" }} />
+                </ListItemIcon>
+                <ListItemText style={{ color: "lightgrey" }} primary="Download App" />
               </ListItem>
             </List>
           </div>
