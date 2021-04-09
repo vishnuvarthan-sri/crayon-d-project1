@@ -14,6 +14,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import GroupWorkIcon from '@material-ui/icons/GroupWork';
 
+
 import App1 from './App1.jsx'
 
 
@@ -60,6 +61,16 @@ const styles = theme => ({
   dividerH: {
     width: "50%"
 
+  },
+  marker:{
+    marginLeft:theme.spacing(2),
+    marginTop:theme.spacing(2),
+    cursor:"pointer"
+  },
+  openmarker:{
+    marginLeft:theme.spacing(-10),
+    marginTop:theme.spacing(2),
+    cursor:"pointer"
   }
 
 });
@@ -70,10 +81,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+       open:true,
+       full:""
     }
   }
-
+close=()=>{
+  this.setState({
+    open:false,
+    full:"opened"
+  })
+}
+open=()=>{
+  this.setState({
+    open:true,
+    full:""
+  })
+}
   render() {
     const { classes } = this.props
     return (
@@ -81,10 +104,11 @@ class App extends React.Component {
         <CssBaseline />
         <Drawer
           className={classes.drawer}
-          variant="permanent"
+          variant="persistent"
           classes={{
             paper: classes.drawerPaper,
           }}
+          open={this.state.open}
           anchor="left"
         >
           <div className={classes.header}>
@@ -99,7 +123,7 @@ class App extends React.Component {
                 </ListItemIcon>
                 <ListItemText style={{ color: "white" }} primary="Dashboard" />
                 <ListItemSecondaryAction>
-                    <PlayCircleFilledIcon style={{ color: "#f5d442" }}/>
+                    <PlayCircleFilledIcon style={{ color: "#f5d442",cursor:"pointer" }} onClick={this.close}/>
                 </ListItemSecondaryAction>
               </ListItem>
               <ListItem button>
@@ -170,7 +194,7 @@ class App extends React.Component {
           </Grid>
           </div>
         </Drawer>
-        <App1 />
+        <App1 open={this.state.full} again={this.open}/>
       </div>
     );
   }

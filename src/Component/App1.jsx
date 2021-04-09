@@ -16,24 +16,30 @@ import AvTimerIcon from '@material-ui/icons/AvTimer';
 import { Description } from '@material-ui/icons';
 import PanoramaOutlinedIcon from '@material-ui/icons/PanoramaOutlined';
 import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
+import TocIcon from '@material-ui/icons/Toc';
 const styles = theme => ({
     root: {
         display: 'flex',
     },
+    openroot:{
+        display: 'flex',
+        marginLeft:theme.spacing(-15)
+    },
     text: {
         flexGrow: 1,
-        marginLeft: theme.spacing(5),
-        marginTop: theme.spacing(5)
+        marginLeft: theme.spacing(4),
+        marginTop: theme.spacing(5),   
     },
+   
     button: {
         margin: theme.spacing(1),
         marginLeft: theme.spacing(107)
     },
     table: {
-        width: 650,
+        width: 750,
     },
     table1: {
-        width: 685,
+        width: 770,
     },
     paper: {
         padding: theme.spacing(3),
@@ -41,7 +47,7 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     view: {
-        marginLeft: theme.spacing(40)
+        marginLeft: theme.spacing(50)
     },
     Vdivider: {
         marginLeft: theme.spacing(-23),
@@ -64,7 +70,7 @@ const styles = theme => ({
     root1: {
         flexGrow: 1,
         marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(6)
+        marginLeft: theme.spacing(1)
     },
     paper1: {
         padding: theme.spacing(2),
@@ -97,13 +103,14 @@ const styles = theme => ({
     },
     pdfbutton: {
         marginTop: theme.spacing(3),
+        marginLeft: theme.spacing(7),
         width: 300,
 
     },
     pdfbutton1: {
         marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(5),
-        width: 300,
+        marginLeft: theme.spacing(4),
+        width: 310,
 
     },
     leftside1: {
@@ -116,6 +123,12 @@ const styles = theme => ({
         maxWidth: 400,
         backgroundColor: theme.palette.background.paper,
     },
+    marker:{
+        cursor:"pointer",
+        marginRight:theme.spacing(2),
+       
+      
+      },
 
 
 })
@@ -141,11 +154,15 @@ class App1 extends React.Component {
     render() {
         const { classes } = this.props
         return (
-            <div className={classes.root}>
+            <div className={this.props.open ==="opened" ? classes.openroot : classes.root}>
                 <CssBaseline />
                 <div className={classes.text}>
+              
                     <Grid container direction="row">
                         <Grid item>
+                        <TocIcon className={classes.marker} onClick={this.props.again} fontSize="large"/>
+                        </Grid>
+                        <Grid item>  
                             <Select
                                 value={this.state.value}
                                 displayEmpty
@@ -167,15 +184,15 @@ class App1 extends React.Component {
                         </Grid>
                     </Grid>
                     <Divider style={{ marginTop: 20 }} />
-                    <Grid container direction="row">
-                        <Grid item >
+                    <Grid container direction="row" >
+                        <Grid item xs >
                             <div>
-                                <h1>Timesheet
+                                <div style={{display:"flex",alignItems:"center"}}>
+                                <h1 >Timesheet</h1>
                                <Button variant="outlined"
                                         color="primary" className={classes.view}> VIEW FULL SHEET</Button>
                                     <MoreHorizIcon style={{ marginLeft: 20 }} />
-
-                                </h1>
+                                </div>
                                 <TableContainer >
                                     <Table className={classes.table} aria-label="simple table">
                                         <TableHead>
@@ -206,10 +223,9 @@ class App1 extends React.Component {
                         <div style={{ marginLeft: 20 }}>
                             <Divider orientation="vertical" />
                         </div>
-                        <Grid item>
-
+                        <Grid item xs >
                             <div className={classes.root1}>
-                                <Typography variant="h1" style={{ fontSize: 20, marginBottom: 15 }}> Report</Typography>
+                                <Typography variant="h1" style={{ fontSize: 20, marginBottom: 15,marginLeft:30 }}> Report</Typography>
                                 <Paper className={classes.paper1} elevation={3} >
                                     <Grid container spacing={2}>
                                         <Grid item style={{ marginTop: 12 }}>
@@ -220,10 +236,10 @@ class App1 extends React.Component {
                                                 <Grid item xs>
                                                     <Typography gutterBottom variant="subtitle1" style={{ color: "white" }}>
                                                         Weekly Activity
-                </Typography>
+                   </Typography>
                                                     <Typography variant="body2" gutterBottom style={{ color: "white" }}>
                                                         52%
-                </Typography>
+                    </Typography>
                                                 </Grid>
                                             </Grid>
                                             <Grid item style={{ marginLeft: 5 }}>
@@ -234,7 +250,7 @@ class App1 extends React.Component {
                                                     startIcon={<ArrowDropUpIcon />}
                                                 >
                                                     17%
-      </Button>
+                      </Button>
                                             </Grid>
                                         </Grid>
                                     </Grid>
@@ -249,10 +265,10 @@ class App1 extends React.Component {
                                                 <Grid item xs>
                                                     <Typography gutterBottom variant="subtitle1" style={{ color: "black" }}>
                                                         Worked this week
-                </Typography>
+                       </Typography>
                                                     <Typography variant="body2" gutterBottom style={{ color: "black" }}>
                                                         11:56:33
-                </Typography>
+                           </Typography>
                                                 </Grid>
                                             </Grid>
                                             <Grid item style={{ marginLeft: 5 }}>
@@ -263,7 +279,7 @@ class App1 extends React.Component {
                                                     startIcon={<ArrowDropDownIcon />}
                                                 >
                                                     17%
-      </Button>
+                          </Button>
                                             </Grid>
                                         </Grid>
                                     </Grid>
@@ -276,7 +292,7 @@ class App1 extends React.Component {
                         <Divider />
                     </div>
                     <Grid container direction="row">
-                        <Grid item>
+                        <Grid item xs>
                             <div className={classes.table1}>
                                 <Typography variant="h1" style={{ fontSize: 20, marginTop: 20 }}> To-Do lists</Typography>
                                 <Grid container spacing={1} className={classes.grid}>
@@ -284,7 +300,7 @@ class App1 extends React.Component {
                                         <Grid item style={{ marginTop: 15 }}>
                                             <Typography variant="h1" style={{ fontSize: 20, color: "blueviolet" }} align="center">20<br /> May</Typography>
                                         </Grid>
-                                        <Grid item xs={6}  >
+                                        <Grid item xs={10}  >
                                             <Paper className={classes.paper} elevation={3}>
                                                 <Typography variant='h1' style={{ fontSize: 20 }} align="left" >Revamp instagram</Typography>
                                                 <Typography align="left" style={{ fontSize: 12 }}>Today</Typography>
@@ -296,7 +312,7 @@ class App1 extends React.Component {
                                         <Grid item style={{ marginTop: 15 }}>
                                             <Typography variant="h1" style={{ fontSize: 20 }} align="center">21<br /> May</Typography>
                                         </Grid>
-                                        <Grid item xs={6}  >
+                                        <Grid item xs={10}  >
                                             <Paper className={classes.paper} elevation={0}>
                                                 <Typography variant='h1' style={{ fontSize: 20 }} align="left">Prototyping</Typography>
                                                 <Typography align="left" style={{ fontSize: 12 }}>Upcoming</Typography>
@@ -308,7 +324,7 @@ class App1 extends React.Component {
                                         <Grid item style={{ marginTop: 15 }}>
                                             <Typography variant="h1" style={{ fontSize: 20 }} align="center">22<br /> May</Typography>
                                         </Grid>
-                                        <Grid item xs={6}  >
+                                        <Grid item xs={10}  >
                                             <Paper className={classes.paper} elevation={0}>
                                                 <Typography variant='h1' style={{ fontSize: 20 }} align="left">Collect references for new project</Typography>
                                                 <Typography align="left" style={{ fontSize: 12 }}>Upcoming</Typography>
@@ -325,7 +341,7 @@ class App1 extends React.Component {
                         {/* <div >
                             <Divider orientation="vertical" className={classes.Vdivider} />
                         </div> */}
-                        <Grid item>
+                        <Grid item xs>
                             <div className={classes.leftside1}>
                                 <Typography variant="h1" style={{ fontSize: 20, marginBottom: 20 }}> Screenshots</Typography>
                                 <List className={classes.screenshot}>
