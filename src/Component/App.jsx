@@ -1,7 +1,6 @@
 import React from 'react';
 import {  withStyles, Grid, Avatar, Drawer, List, ListItem, ListItemIcon, ListItemText,ListItemSecondaryAction, Divider, Badge } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import EmojiNatureIcon from '@material-ui/icons/EmojiNature';
 import SpeedIcon from '@material-ui/icons/Speed';
 import AvTimerIcon from '@material-ui/icons/AvTimer';
 import MultilineChartIcon from '@material-ui/icons/MultilineChart';
@@ -13,9 +12,10 @@ import GetAppIcon from '@material-ui/icons/GetApp';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SettingsIcon from '@material-ui/icons/Settings';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
+import GroupWorkIcon from '@material-ui/icons/GroupWork';
 
 import App1 from './App1.jsx'
-import { orange } from '@material-ui/core/colors';
+
 
 
 const drawerWidth = 220;
@@ -88,7 +88,7 @@ class App extends React.Component {
           anchor="left"
         >
           <div className={classes.header}>
-            <EmojiNatureIcon style={{ color: orange[500] }} fontSize="large"/>
+            <GroupWorkIcon style={{ color:  "#f5d442" }} fontSize="large"/>
           </div>
           <div className={classes.list}>
             <Divider className={classes.divider} />
@@ -99,7 +99,7 @@ class App extends React.Component {
                 </ListItemIcon>
                 <ListItemText style={{ color: "white" }} primary="Dashboard" />
                 <ListItemSecondaryAction>
-                    <PlayCircleFilledIcon/>
+                    <PlayCircleFilledIcon style={{ color: "#f5d442" }}/>
                 </ListItemSecondaryAction>
               </ListItem>
               <ListItem button>
