@@ -59,8 +59,8 @@ const styles = theme => ({
     },
     root1: {
         flexGrow: 1,
-        marginTop: theme.spacing(5),
-        marginLeft: theme.spacing(7)
+        marginTop: theme.spacing(3),
+        marginLeft: theme.spacing(6)
     },
     paper1: {
         padding: theme.spacing(2),
@@ -95,8 +95,8 @@ const styles = theme => ({
 
     },
     leftside1: {
-        marginTop: theme.spacing(5),
-        marginLeft: theme.spacing(-13)
+        marginTop: theme.spacing(2),
+        marginLeft: theme.spacing(-17)
     },
     screenshot: {
         width: '110%',
@@ -191,7 +191,7 @@ class App1 extends React.Component {
                         <Grid item>
 
                             <div className={classes.root1}>
-                                <Typography variant="h1" style={{ fontSize: 20,marginBottom:10 }}> Report</Typography>
+                                <Typography variant="h1" style={{ fontSize: 20,marginBottom:15 }}> Report</Typography>
                                 <Paper className={classes.paper1} elevation={3} >
                                     <Grid container spacing={2}>
                                         <Grid item style={{ marginTop: 12 }}>
@@ -260,7 +260,7 @@ class App1 extends React.Component {
                     <Grid container direction="row">
                         <Grid item>
                             <div>
-                                <h2>To-Do lists</h2>
+                            <Typography variant="h1" style={{ fontSize: 20,marginTop:20 }}> To-Do lists</Typography>
                                 <Grid container spacing={1} className={classes.grid}>
                                     <Grid container spacing={2} direction="row" className={classes.grid2}>
                                         <Grid item style={{ marginTop: 15 }}>
@@ -306,7 +306,7 @@ class App1 extends React.Component {
                         </div>
                         <Grid item>
                             <div className={classes.leftside1}>
-                            <Typography variant="h1" style={{ fontSize: 20 }}> Screenshots</Typography>
+                            <Typography variant="h1" style={{ fontSize: 20,marginBottom:20 }}> Screenshots</Typography>
                     <List className={classes.screenshot}>
       <ListItem>
         <ListItemAvatar>
