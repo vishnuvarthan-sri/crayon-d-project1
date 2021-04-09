@@ -66,31 +66,39 @@ const styles = theme => ({
         padding: theme.spacing(2),
         margin: 'auto',
         maxWidth: 300,
-        background: "blueviolet"
+        background: "blueviolet",
+        borderRadius: 14,
     },
     paper2: {
         padding: theme.spacing(2),
         margin: 'auto',
         maxWidth: 300,
         background: "lightgrey",
-        marginTop: theme.spacing(3)
+        marginTop: theme.spacing(3),
+        borderRadius: 14,
     },
     varybutton: {
 
         marginLeft: 5,
-        background: "green",
-        color: "white"
+        background: "lightgreen",
+        color: "#036303"
 
     },
     varybutton1: {
 
         marginLeft: 5,
-        background: "red",
-        color: "white"
+        background: "#e69c9a",
+        color: "#960400"
 
     },
     pdfbutton: {
         marginTop: theme.spacing(3),
+        width: 300,
+
+    },
+    pdfbutton1: {
+        marginTop: theme.spacing(3),
+        marginLeft:theme.spacing(5),
         width: 300,
 
     },
@@ -342,7 +350,7 @@ class App1 extends React.Component {
         </ListItemSecondaryAction>
       </ListItem>
     </List>
-    <Button variant="outlined" color="primary"  className={classes.pdfbutton} size="large">View All</Button>
+    <Button variant="outlined" color="primary"  className={classes.pdfbutton1} size="large">View All</Button>
                             </div>
                         </Grid>
                     </Grid>

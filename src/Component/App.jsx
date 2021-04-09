@@ -116,13 +116,14 @@ class App extends React.Component {
             <List>
               <ListItem button>
                 <ListItemIcon>
-                  <ListAltIcon style={{ color: "lightgrey" }} />
+                <EventAvailableIcon style={{ color: "lightgrey" }} />
+                  
                 </ListItemIcon>
                 <ListItemText style={{ color: "lightgrey" }} primary="To-Do" />
               </ListItem>
               <ListItem button>
                 <ListItemIcon>
-                  <EventAvailableIcon style={{ color: "lightgrey" }} />
+                <ListAltIcon style={{ color: "lightgrey" }} />
                 </ListItemIcon>
                 <ListItemText style={{ color: "lightgrey" }} primary="Invoices" />
               </ListItem>
