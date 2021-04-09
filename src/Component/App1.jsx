@@ -1,6 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { Paper, withStyles, Grid, TextField, Button, Link, Avatar, Drawer, List, ListItem, ListItemIcon, ListItemText,ListItemAvatar,ListItemSecondaryAction, Divider, Select, Container, MenuItem, Typography, Card, CardContent } from '@material-ui/core';
+import { Paper, withStyles, Grid, TextField, Button, Link, Avatar, Drawer, List, ListItem, ListItemIcon, ListItemText, ListItemAvatar, ListItemSecondaryAction, Divider, Select, Container, MenuItem, Typography, Card, CardContent } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import Table from '@material-ui/core/Table';
@@ -56,24 +56,25 @@ const styles = theme => ({
         marginTop: theme.spacing(2)
     },
     leftside: {
-        marginTop: theme.spacing(17),
-        marginLeft: theme.spacing(-45)
+        marginLeft: theme.spacing(-35),
+        marginTop: theme.spacing(25)
     },
     root1: {
         flexGrow: 1,
-        marginTop: 10
+        marginTop: theme.spacing(5),
+        marginLeft: theme.spacing(7)
     },
     paper1: {
         padding: theme.spacing(2),
         margin: 'auto',
-        maxWidth: 500,
+        maxWidth: 300,
         background: "blueviolet"
     },
     paper2: {
         padding: theme.spacing(2),
         margin: 'auto',
-        maxWidth: 500,
-        background: "white",
+        maxWidth: 300,
+        background: "lightgrey",
         marginTop: theme.spacing(3)
     },
     varybutton: {
@@ -95,14 +96,15 @@ const styles = theme => ({
         width: 300,
 
     },
-    leftside1:{
-        marginTop:theme.spacing(10)
+    leftside1: {
+        marginTop: theme.spacing(5),
+        marginLeft: theme.spacing(-13)
     },
     screenshot: {
         width: '110%',
         maxWidth: 400,
         backgroundColor: theme.palette.background.paper,
-      },
+    },
 
 
 })
@@ -147,151 +149,167 @@ class App1 extends React.Component {
                         startIcon={<AddIcon />}
                     >
                         Add Project
-      </Button>
-                    <br />
-
-                    <Divider style={{ marginTop: 30 }}></Divider>
-                    <div style={{ marginTop: 20, fontSize: 10 }}>
-                        <h1>Timesheet
+                    </Button>
+                    <Divider style={{ marginTop: 20 }} />
+                    <Grid container direction="row">
+                        <Grid item >
+                            <div>
+                                <h1>Timesheet
                                <Button variant="outlined"
-                                color="primary" className={classes.view}> VIEW FULL SHEET</Button>
-                            <MoreHorizIcon style={{ marginLeft: 20 }} />
+                                        color="primary" className={classes.view}> VIEW FULL SHEET</Button>
+                                    <MoreHorizIcon style={{ marginLeft: 20 }} />
 
-                        </h1>
-
-                        <TableContainer >
-                            <Table className={classes.table} aria-label="simple table">
-                                <TableHead>
-                                    <TableCell>Project</TableCell>
-                                    <TableCell align="right">Date</TableCell>
-                                    <TableCell align="right">Start time</TableCell>
-                                    <TableCell align="right">Stop time</TableCell>
-                                    <TableCell align="right">Duration</TableCell>
-                                </TableHead>
-                                <TableBody>
-                                    {rows.map((row) => (
-                                        <TableRow key={row.name}>
-                                            <TableCell component="th" scope="row">
-                                                {row.name}
-                                            </TableCell>
-                                            <TableCell align="right">{row.Date}</TableCell>
-                                            <TableCell align="right">{row.starttime}</TableCell>
-                                            <TableCell align="right">{row.stoptime}</TableCell>
-                                            <TableCell align="right">{row.Duration}</TableCell>
-                                        </TableRow>
-                                    ))}
-                                </TableBody>
-                            </Table>
-                        </TableContainer>
-                        <Divider />
-                        <h2>To-Do lists</h2>
-                        <Grid container spacing={1} className={classes.grid}>
-                            <Grid container spacing={2} direction="row" className={classes.grid2}>
-                                <Grid item style={{ marginTop: 15 }}>
-                                    <Typography variant="h1" style={{ fontSize: 20, color: "blueviolet" }} align="center">20<br /> May</Typography>
-                                </Grid>
-                                <Grid item xs={6}  >
-                                    <Paper className={classes.paper} elevation={3}>
-                                        <Typography variant='h1' style={{ fontSize: 20 }} align="left" >Revamp instagram</Typography>
-                                        <Typography align="left" style={{ fontSize: 12 }}>Today</Typography>
-                                        <MoreHorizIcon className={classes.horizon} />
-                                    </Paper>
-                                </Grid>
-                            </Grid>
-                            <Grid container spacing={2} direction="row" className={classes.grid2}>
-                                <Grid item style={{ marginTop: 15 }}>
-                                    <Typography variant="h1" style={{ fontSize: 20 }} align="center">21<br /> May</Typography>
-                                </Grid>
-                                <Grid item xs={6}  >
-                                    <Paper className={classes.paper}>
-                                        <Typography variant='h1' style={{ fontSize: 20 }} align="left">Prototyping</Typography>
-                                        <Typography align="left" style={{ fontSize: 12 }}>Upcoming</Typography>
-                                        <MoreHorizIcon className={classes.horizon} />
-                                    </Paper>
-                                </Grid>
-                            </Grid>
-                            <Grid container spacing={2} direction="row" className={classes.grid2}>
-                                <Grid item style={{ marginTop: 15 }}>
-                                    <Typography variant="h1" style={{ fontSize: 20 }} align="center">22<br /> May</Typography>
-                                </Grid>
-                                <Grid item xs={6}  >
-                                    <Paper className={classes.paper}>
-                                        <Typography variant='h1' style={{ fontSize: 20 }} align="left">Collect references for new project</Typography>
-                                        <Typography align="left" style={{ fontSize: 12 }}>Upcoming</Typography>
-                                        <MoreHorizIcon className={classes.horizon} />
-                                    </Paper>
-                                </Grid>
-                            </Grid>
+                                </h1>
+                                <TableContainer >
+                                    <Table className={classes.table} aria-label="simple table">
+                                        <TableHead>
+                                            <TableCell>Project</TableCell>
+                                            <TableCell align="right">Date</TableCell>
+                                            <TableCell align="right">Start time</TableCell>
+                                            <TableCell align="right">Stop time</TableCell>
+                                            <TableCell align="right">Duration</TableCell>
+                                        </TableHead>
+                                        <TableBody>
+                                            {rows.map((row) => (
+                                                <TableRow key={row.name}>
+                                                    <TableCell component="th" scope="row">
+                                                        {row.name}
+                                                    </TableCell>
+                                                    <TableCell align="right">{row.Date}</TableCell>
+                                                    <TableCell align="right">{row.starttime}</TableCell>
+                                                    <TableCell align="right">{row.stoptime}</TableCell>
+                                                    <TableCell align="right">{row.Duration}</TableCell>
+                                                </TableRow>
+                                            ))}
+                                        </TableBody>
+                                    </Table>
+                                </TableContainer>
+                            </div>
 
                         </Grid>
-                    </div>
-                    <Divider orientation="vertical" className={classes.Vdivider} />
-                </div>
-                <div className={classes.leftside}>
-                    <Typography variant="h1" style={{ fontSize: 20 }}> Report</Typography>
-                    <div className={classes.root1}>
-                        <Paper className={classes.paper1} >
-                            <Grid container spacing={2}>
-                                <Grid item style={{ marginTop: 12 }}>
-                                    <MultilineChartIcon style={{ color: "white" }} />
-                                </Grid>
-                                <Grid item xs={12} sm container>
-                                    <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography gutterBottom variant="subtitle1" style={{ color: "white" }}>
-                                                Weekly Activity
+                        <div style={{ marginLeft: 7 }}>
+                            <Divider orientation="vertical" />
+                        </div>
+                        <Grid item>
+
+                            <div className={classes.root1}>
+                                <Typography variant="h1" style={{ fontSize: 20,marginBottom:10 }}> Report</Typography>
+                                <Paper className={classes.paper1} elevation={3} >
+                                    <Grid container spacing={2}>
+                                        <Grid item style={{ marginTop: 12 }}>
+                                            <MultilineChartIcon style={{ color: "white" }} />
+                                        </Grid>
+                                        <Grid item xs={12} sm container>
+                                            <Grid item xs container direction="column" spacing={2}>
+                                                <Grid item xs>
+                                                    <Typography gutterBottom variant="subtitle1" style={{ color: "white" }}>
+                                                        Weekly Activity
                 </Typography>
-                                            <Typography variant="body2" gutterBottom style={{ color: "white" }}>
-                                                52%
+                                                    <Typography variant="body2" gutterBottom style={{ color: "white" }}>
+                                                        52%
                 </Typography>
+                                                </Grid>
+                                            </Grid>
+                                            <Grid item style={{ marginLeft: 5 }}>
+                                                <Button
+                                                    variant="contained"
+                                                    size="small"
+                                                    className={classes.varybutton}
+                                                    startIcon={<ArrowDropUpIcon />}
+                                                >
+                                                    17%
+      </Button>
+                                            </Grid>
                                         </Grid>
                                     </Grid>
-                                    <Grid item style={{ marginLeft: 5 }}>
-                                        <Button
-                                            variant="contained"
-                                            size="small"
-                                            className={classes.varybutton}
-                                            startIcon={<ArrowDropUpIcon />}
-                                        >
-                                            17%
+                                </Paper>
+                                <Paper className={classes.paper2} elevation={0}>
+                                    <Grid container spacing={2}>
+                                        <Grid item style={{ marginTop: 12 }}>
+                                            <AvTimerIcon style={{ color: "black" }} />
+                                        </Grid>
+                                        <Grid item xs={12} sm container>
+                                            <Grid item xs container direction="column" spacing={2}>
+                                                <Grid item xs>
+                                                    <Typography gutterBottom variant="subtitle1" style={{ color: "black" }}>
+                                                        Worked this week
+                </Typography>
+                                                    <Typography variant="body2" gutterBottom style={{ color: "black" }}>
+                                                        11:56:33
+                </Typography>
+                                                </Grid>
+                                            </Grid>
+                                            <Grid item style={{ marginLeft: 5 }}>
+                                                <Button
+                                                    variant="contained"
+                                                    size="small"
+                                                    className={classes.varybutton1}
+                                                    startIcon={<ArrowDropDownIcon />}
+                                                >
+                                                    17%
       </Button>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                        <Paper className={classes.paper2} >
-                            <Grid container spacing={2}>
-                                <Grid item style={{ marginTop: 12 }}>
-                                    <AvTimerIcon style={{ color: "black" }} />
-                                </Grid>
-                                <Grid item xs={12} sm container>
-                                    <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography gutterBottom variant="subtitle1" style={{ color: "black" }}>
-                                                Worked this week
-                </Typography>
-                                            <Typography variant="body2" gutterBottom style={{ color: "black" }}>
-                                                11:56:33
-                </Typography>
+                                            </Grid>
                                         </Grid>
                                     </Grid>
-                                    <Grid item style={{ marginLeft: 5 }}>
-                                        <Button
-                                            variant="contained"
-                                            size="small"
-                                            className={classes.varybutton1}
-                                            startIcon={<ArrowDropDownIcon />}
-                                        >
-                                            17%
-      </Button>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                        <Button variant="outlined" color="primary" startIcon={<Description />} className={classes.pdfbutton} size="large">Export As Pdf</Button>
+                                </Paper>
+                                <Button variant="outlined" color="primary" startIcon={<Description />} className={classes.pdfbutton} size="large">Export As Pdf</Button>
+                            </div>
+                        </Grid>
+                    </Grid>
+                    <div>
+                        <Divider/>
                     </div>
-                    <div className={classes.leftside1}>
-                    <Typography variant="h1" style={{ fontSize: 20 }}> Screenshots</Typography>
+                    <Grid container direction="row">
+                        <Grid item>
+                            <div>
+                                <h2>To-Do lists</h2>
+                                <Grid container spacing={1} className={classes.grid}>
+                                    <Grid container spacing={2} direction="row" className={classes.grid2}>
+                                        <Grid item style={{ marginTop: 15 }}>
+                                            <Typography variant="h1" style={{ fontSize: 20, color: "blueviolet" }} align="center">20<br /> May</Typography>
+                                        </Grid>
+                                        <Grid item xs={6}  >
+                                            <Paper className={classes.paper} elevation={3}>
+                                                <Typography variant='h1' style={{ fontSize: 20 }} align="left" >Revamp instagram</Typography>
+                                                <Typography align="left" style={{ fontSize: 12 }}>Today</Typography>
+                                                <MoreHorizIcon className={classes.horizon} />
+                                            </Paper>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container spacing={2} direction="row" className={classes.grid2}>
+                                        <Grid item style={{ marginTop: 15 }}>
+                                            <Typography variant="h1" style={{ fontSize: 20 }} align="center">21<br /> May</Typography>
+                                        </Grid>
+                                        <Grid item xs={6}  >
+                                            <Paper className={classes.paper} elevation={0}>
+                                                <Typography variant='h1' style={{ fontSize: 20 }} align="left">Prototyping</Typography>
+                                                <Typography align="left" style={{ fontSize: 12 }}>Upcoming</Typography>
+                                                <MoreHorizIcon className={classes.horizon} />
+                                            </Paper>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container spacing={2} direction="row" className={classes.grid2}>
+                                        <Grid item style={{ marginTop: 15 }}>
+                                            <Typography variant="h1" style={{ fontSize: 20 }} align="center">22<br /> May</Typography>
+                                        </Grid>
+                                        <Grid item xs={6}  >
+                                            <Paper className={classes.paper} elevation={0}>
+                                                <Typography variant='h1' style={{ fontSize: 20 }} align="left">Collect references for new project</Typography>
+                                                <Typography align="left" style={{ fontSize: 12 }}>Upcoming</Typography>
+                                                <MoreHorizIcon className={classes.horizon} />
+                                            </Paper>
+                                        </Grid>
+                                    </Grid>
+
+                                </Grid>
+                            </div>
+                        </Grid>
+                        <div>
+                            <Divider orientation="vertical" style={{marginLeft:-158}} />
+                        </div>
+                        <Grid item>
+                            <div className={classes.leftside1}>
+                            <Typography variant="h1" style={{ fontSize: 20 }}> Screenshots</Typography>
                     <List className={classes.screenshot}>
       <ListItem>
         <ListItemAvatar>
@@ -328,8 +346,9 @@ class App1 extends React.Component {
       </ListItem>
     </List>
     <Button variant="outlined" color="primary"  className={classes.pdfbutton} size="large">View All</Button>
-                    </div>
-
+                            </div>
+                        </Grid>
+                    </Grid>
                 </div>
 
             </div>
