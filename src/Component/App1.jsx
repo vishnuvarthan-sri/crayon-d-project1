@@ -70,7 +70,8 @@ const styles = theme => ({
     root1: {
         flexGrow: 1,
         marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(1)
+        marginLeft: theme.spacing(5),
+       
     },
     paper1: {
         padding: theme.spacing(2),
@@ -84,7 +85,6 @@ const styles = theme => ({
         margin: 'auto',
         maxWidth: 300,
         background: "lightgrey",
-        marginTop: theme.spacing(3),
         borderRadius: 14,
     },
     varybutton: {
@@ -114,12 +114,12 @@ const styles = theme => ({
 
     },
     leftside1: {
-        flexGrow: 1,
         marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(6)
+        marginLeft: theme.spacing(6),
+       
     },
     screenshot: {
-        width: '110%',
+        width: '100%',
         maxWidth: 400,
         backgroundColor: theme.palette.background.paper,
     },
@@ -224,8 +224,12 @@ class App1 extends React.Component {
                             <Divider orientation="vertical" />
                         </div>
                         <Grid item xs >
-                            <div className={classes.root1}>
-                                <Typography variant="h1" style={{ fontSize: 20, marginBottom: 15,marginLeft:30 }}> Report</Typography>
+                              <div className={classes.root1}>
+                                  <Grid container direction="column" spacing={2} >
+                                      <Grid item style={{marginLeft:30}}>
+                                <Typography variant="h1" style={{ fontSize: 20 }}> Report</Typography>
+                                </Grid>
+                                <Grid item>
                                 <Paper className={classes.paper1} elevation={3} >
                                     <Grid container spacing={2}>
                                         <Grid item style={{ marginTop: 12 }}>
@@ -255,6 +259,8 @@ class App1 extends React.Component {
                                         </Grid>
                                     </Grid>
                                 </Paper>
+                                </Grid>
+                                <Grid item>
                                 <Paper className={classes.paper2} elevation={0}>
                                     <Grid container spacing={2}>
                                         <Grid item style={{ marginTop: 12 }}>
@@ -284,8 +290,12 @@ class App1 extends React.Component {
                                         </Grid>
                                     </Grid>
                                 </Paper>
-                                <Button variant="outlined" color="primary" startIcon={<Description />} className={classes.pdfbutton} size="large">Export As Pdf</Button>
-                            </div>
+                                </Grid>
+                                <Grid item style={{marginLeft:38}}>
+                                <Button variant="outlined" color="primary" startIcon={<Description />} style={{width:300}} size="large">Export As Pdf</Button> 
+                                </Grid>
+                                </Grid>
+                                </div>
                         </Grid>
                     </Grid>
                     <div>
