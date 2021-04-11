@@ -47,7 +47,7 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     view: {
-        marginLeft: theme.spacing(50)
+        marginLeft: theme.spacing(45)
     },
     Vdivider: {
         marginLeft: theme.spacing(-23),
@@ -101,14 +101,14 @@ const styles = theme => ({
     },
     pdfbutton: {
         marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(7),
-        width: 300,
+        marginLeft: theme.spacing(5),
+        width: 320,
 
     },
     pdfbutton1: {
         marginTop: theme.spacing(3),
         marginLeft: theme.spacing(4),
-        width: 310,
+        width: 320,
 
     },
     leftside1: {
@@ -290,7 +290,7 @@ class App1 extends React.Component {
                                 </Paper>
                                 </Grid>
                                 <Grid item >
-                                <Button variant="outlined" color="primary" startIcon={<Description />} style={{width:340}} size="large">Export As Pdf</Button> 
+                                <Button variant="outlined" color="primary" startIcon={<Description />} style={{width:300}} size="large">Export As Pdf</Button> 
                                 </Grid>
                                 </Grid>
                                 </div>
