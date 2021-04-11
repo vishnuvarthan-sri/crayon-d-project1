@@ -70,20 +70,18 @@ const styles = theme => ({
     root1: {
         flexGrow: 1,
         marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(5),
+        marginLeft: theme.spacing(7),
        
     },
     paper1: {
         padding: theme.spacing(2),
-        margin: 'auto',
-        maxWidth: 300,
+        maxWidth: 340,
         background: "blueviolet",
         borderRadius: 14,
     },
     paper2: {
         padding: theme.spacing(2),
-        margin: 'auto',
-        maxWidth: 300,
+        maxWidth: 340,
         background: "lightgrey",
         borderRadius: 14,
     },
@@ -226,7 +224,7 @@ class App1 extends React.Component {
                         <Grid item xs >
                               <div className={classes.root1}>
                                   <Grid container direction="column" spacing={2} >
-                                      <Grid item style={{marginLeft:30}}>
+                                      <Grid item >
                                 <Typography variant="h1" style={{ fontSize: 20 }}> Report</Typography>
                                 </Grid>
                                 <Grid item>
@@ -291,8 +289,8 @@ class App1 extends React.Component {
                                     </Grid>
                                 </Paper>
                                 </Grid>
-                                <Grid item style={{marginLeft:38}}>
-                                <Button variant="outlined" color="primary" startIcon={<Description />} style={{width:300}} size="large">Export As Pdf</Button> 
+                                <Grid item >
+                                <Button variant="outlined" color="primary" startIcon={<Description />} style={{width:340}} size="large">Export As Pdf</Button> 
                                 </Grid>
                                 </Grid>
                                 </div>
