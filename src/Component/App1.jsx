@@ -348,22 +348,21 @@ class App1 extends React.Component {
                         {/* <div >
                             <Divider orientation="vertical" className={classes.Vdivider} />
                         </div> */}
-                        <Grid item xs={6} sm={6} md={3} lg={3} >
+                        <Grid item  xs={6} sm={6} md={3} lg={3} >
                             <div className={classes.root1}>
-                                <Grid container direction="column" spacing={2} >
+                                <Grid container direction="column" spacing={2}  >
                                     <Grid item> 
-                                <Typography variant="h1" style={{ fontSize: 20, marginBottom: 20 }}> Screenshots</Typography>
+                                <Typography variant="h1" style={{ fontSize: 20}}> Screenshots</Typography>
                                 </Grid>
-                                <Grid item >
+                                <Grid item  >
                                    
                                 <List>
-                                <ListItem >
+                                <ListItem style={{width:320}}>
                   <ListItemIcon>  
                    <PanoramaOutlinedIcon/> 
                   </ListItemIcon>
                   <ListItemText
-                    primary="Shot_1"
-                    secondary="attach_1.png"
+                    primary="Shot_1_attach_1.png"
                   />
                   <ListItemSecondaryAction  >
                     <Button size="small" color="primary" edge="end" variant="outlined">
@@ -376,8 +375,8 @@ class App1 extends React.Component {
                    <PanoramaOutlinedIcon/> 
                   </ListItemIcon>
                   <ListItemText
-                    primary="Shot_1"
-                    secondary="attach_3.png"
+                    primary="Shot_1_attach_3.png"
+                   
                   />
                   <ListItemSecondaryAction >
                     <Button size="small" color="primary" edge="end" variant="outlined">
@@ -390,8 +389,8 @@ class App1 extends React.Component {
                    <VideocamOutlinedIcon/> 
                   </ListItemIcon>
                   <ListItemText
-                    primary="Screen"
-                    secondary="attach_3.mov"
+                    primary="Screen_attach_3.mov"
+
                   />
                   <ListItemSecondaryAction >
                     <Button size="small" style={{background:"blueviolet", color:"whitesmoke"}} edge="end" variant="outlined">
@@ -403,7 +402,7 @@ class App1 extends React.Component {
                                 </List>
                                 </Grid>
                                 <Grid item>
-                                <Button variant="outlined" color="primary" style={{width:230}} size="large">View All</Button>
+                                <Button variant="outlined" color="primary" style={{width:310}} size="large">View All</Button>
                                 </Grid>
                                 </Grid>
                             </div>
