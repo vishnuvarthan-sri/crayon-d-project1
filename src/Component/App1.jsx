@@ -36,10 +36,10 @@ const styles = theme => ({
         marginLeft: theme.spacing(107)
     },
     table: {
-        width: 730
+        width: 770
     },
     table1: {
-        width: 750,
+        width: 790,
     },
     paper: {
         padding: theme.spacing(3),
