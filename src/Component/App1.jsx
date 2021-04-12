@@ -42,7 +42,7 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     view: {
-        marginLeft: theme.spacing(60)
+        marginLeft: theme.spacing(55)
     },
     Vdivider: {
         marginLeft: theme.spacing(-23),
