@@ -1,6 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { Paper, withStyles, Grid, Button, Avatar, List, ListItem, ListItemText, ListItemAvatar, ListItemSecondaryAction, Divider, Select, MenuItem, Typography,IconButton, ListItemIcon } from '@material-ui/core';
+import { Paper, withStyles, Grid, Button, List, ListItem, ListItemText, ListItemSecondaryAction, Divider, Select, MenuItem, Typography, ListItemIcon,Accordion,AccordionActions } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -68,6 +68,12 @@ const styles = theme => ({
         marginLeft: theme.spacing(6),
        
     },
+    root2: {
+    
+        marginTop: theme.spacing(3),
+        marginLeft: theme.spacing(8),
+       
+    },
     paper1: {
         padding: theme.spacing(2), 
         background: "blueviolet",
@@ -118,7 +124,7 @@ const styles = theme => ({
         overflow:"hidden"
       },
       listbutton:{
-        marginLeft:theme.spacing(4)
+        padding:theme.spacing(2)
       }
 
 
@@ -344,21 +350,23 @@ class App1 extends React.Component {
                         </div> */}
                         <Grid item xs={6} sm={6} md={3} lg={3} >
                             <div className={classes.root1}>
-                                <Grid container direction="column" spacing={2}>
-                                    <Grid item>
+                                <Grid container direction="column" spacing={2} >
+                                    <Grid item> 
                                 <Typography variant="h1" style={{ fontSize: 20, marginBottom: 20 }}> Screenshots</Typography>
                                 </Grid>
-                                <Grid item xs>
-                                <List className={classes.screenshot}>
+                                <Grid item >
+                                   
+                                <List>
                                 <ListItem >
                   <ListItemIcon>  
                    <PanoramaOutlinedIcon/> 
                   </ListItemIcon>
                   <ListItemText
-                    primary="Shot-1-attach-1.png"
+                    primary="Shot_1"
+                    secondary="attach_1.png"
                   />
                   <ListItemSecondaryAction  >
-                    <Button size="small" color="primary" variant="outlined">
+                    <Button size="small" color="primary" edge="end" variant="outlined">
                      View
                     </Button>
                   </ListItemSecondaryAction>
@@ -368,10 +376,11 @@ class App1 extends React.Component {
                    <PanoramaOutlinedIcon/> 
                   </ListItemIcon>
                   <ListItemText
-                    primary="Shot-1-attach-3.png"
+                    primary="Shot_1"
+                    secondary="attach_3.png"
                   />
                   <ListItemSecondaryAction >
-                    <Button size="small" color="primary" variant="outlined">
+                    <Button size="small" color="primary" edge="end" variant="outlined">
                      View
                     </Button>
                   </ListItemSecondaryAction>
@@ -381,10 +390,11 @@ class App1 extends React.Component {
                    <VideocamOutlinedIcon/> 
                   </ListItemIcon>
                   <ListItemText
-                    primary="Shot-1-attach-3.mov"
+                    primary="Screen"
+                    secondary="attach_3.mov"
                   />
                   <ListItemSecondaryAction >
-                    <Button size="small" color="primary" variant="outlined">
+                    <Button size="small" color="primary" edge="end" variant="outlined">
                      View
                     </Button>
                   </ListItemSecondaryAction>
@@ -393,7 +403,7 @@ class App1 extends React.Component {
                                 </List>
                                 </Grid>
                                 <Grid item>
-                                <Button variant="outlined" color="primary" style={{width:300}} size="large">View All</Button>
+                                <Button variant="outlined" color="primary" style={{width:230}} size="large">View All</Button>
                                 </Grid>
                                 </Grid>
                             </div>
