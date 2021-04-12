@@ -394,8 +394,8 @@ class App1 extends React.Component {
                     secondary="attach_3.mov"
                   />
                   <ListItemSecondaryAction >
-                    <Button size="small" color="primary" edge="end" variant="outlined">
-                     View
+                    <Button size="small" style={{background:"blueviolet", color:"whitesmoke"}} edge="end" variant="outlined">
+                     Play
                     </Button>
                   </ListItemSecondaryAction>
                 </ListItem>
