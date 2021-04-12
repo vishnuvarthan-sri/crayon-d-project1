@@ -1,6 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { Paper, withStyles, Grid, Button, Avatar, List, ListItem, ListItemText, ListItemAvatar, ListItemSecondaryAction, Divider, Select, MenuItem, Typography } from '@material-ui/core';
+import { Paper, withStyles, Grid, Button, Avatar, List, ListItem, ListItemText, ListItemAvatar, ListItemSecondaryAction, Divider, Select, MenuItem, Typography,IconButton, ListItemIcon } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -26,7 +26,7 @@ const styles = theme => ({
         marginLeft:theme.spacing(-15)
     },
     text: {
-        flexGrow: 1,
+        
         marginLeft: theme.spacing(4),
         marginTop: theme.spacing(5),   
     },
@@ -35,19 +35,14 @@ const styles = theme => ({
         margin: theme.spacing(1),
         marginLeft: theme.spacing(107)
     },
-    table: {
-        width: 770
-    },
-    table1: {
-        width: 790,
-    },
+   
     paper: {
         padding: theme.spacing(3),
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
     view: {
-        marginLeft: theme.spacing(45)
+        marginLeft: theme.spacing(60)
     },
     Vdivider: {
         marginLeft: theme.spacing(-23),
@@ -68,20 +63,18 @@ const styles = theme => ({
         marginTop: theme.spacing(25)
     },
     root1: {
-        flexGrow: 1,
+    
         marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(7),
+        marginLeft: theme.spacing(6),
        
     },
     paper1: {
-        padding: theme.spacing(2),
-        maxWidth: 300,
+        padding: theme.spacing(2), 
         background: "blueviolet",
         borderRadius: 14,
     },
     paper2: {
         padding: theme.spacing(2),
-        maxWidth: 300,
         background: "lightgrey",
         borderRadius: 14,
     },
@@ -111,22 +104,22 @@ const styles = theme => ({
         width: 320,
 
     },
-    leftside1: {
-        marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(6),
-       
-    },
+    
     screenshot: {
-        width: '100%',
-        maxWidth: 400,
+        width:340,
         backgroundColor: theme.palette.background.paper,
     },
     marker:{
         cursor:"pointer",
         marginRight:theme.spacing(2),
        
-      
       },
+      listItemroot:{
+        overflow:"hidden"
+      },
+      listbutton:{
+        marginLeft:theme.spacing(4)
+      }
 
 
 })
@@ -183,7 +176,7 @@ class App1 extends React.Component {
                     </Grid>
                     <Divider style={{ marginTop: 20 }} />
                     <Grid container direction="row" >
-                        <Grid item xs >
+                        <Grid item xs={12} sm={12} md={8} lg={8} >
                             <div>
                                 <div style={{display:"flex",alignItems:"center"}}>
                                 <h1 >Timesheet</h1>
@@ -192,7 +185,7 @@ class App1 extends React.Component {
                                     <MoreHorizIcon style={{ marginLeft: 20 }} />
                                 </div>
                                 <TableContainer >
-                                    <Table className={classes.table} aria-label="simple table">
+                                    <Table  aria-label="simple table">
                                         <TableHead>
                                             <TableCell>Project</TableCell>
                                             <TableCell align="right">Date</TableCell>
@@ -221,7 +214,7 @@ class App1 extends React.Component {
                         <div style={{ marginLeft: 20 }}>
                             <Divider orientation="vertical" />
                         </div>
-                        <Grid item xs >
+                        <Grid item xs={6} sm={6} md={3} lg={3} >
                               <div className={classes.root1}>
                                   <Grid container direction="column" spacing={2} >
                                       <Grid item >
@@ -300,8 +293,8 @@ class App1 extends React.Component {
                         <Divider />
                     </div>
                     <Grid container direction="row">
-                        <Grid item xs>
-                            <div className={classes.table1}>
+                        <Grid item xs={12} sm={12} md={8} lg={8}>
+                            <div>
                                 <Typography variant="h1" style={{ fontSize: 20, marginTop: 20 }}> To-Do lists</Typography>
                                 <Grid container spacing={1} className={classes.grid}>
                                     <Grid container spacing={2} direction="row" className={classes.grid2}>
@@ -344,50 +337,65 @@ class App1 extends React.Component {
                             </div>
                         </Grid>
                         <div>
-                            <Divider orientation="vertical" />
+                            <Divider orientation="vertical" style={{marginLeft:20}}/>
                         </div>
                         {/* <div >
                             <Divider orientation="vertical" className={classes.Vdivider} />
                         </div> */}
-                        <Grid item xs>
-                            <div className={classes.leftside1}>
+                        <Grid item xs={6} sm={6} md={3} lg={3} >
+                            <div className={classes.root1}>
+                                <Grid container direction="column" spacing={2}>
+                                    <Grid item>
                                 <Typography variant="h1" style={{ fontSize: 20, marginBottom: 20 }}> Screenshots</Typography>
+                                </Grid>
+                                <Grid item xs>
                                 <List className={classes.screenshot}>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <PanoramaOutlinedIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary="shots_1_attach_1.png" secondary="Jan 9, 2014" />
-                                        <ListItemSecondaryAction>
-                                            <Button variant="outlined" color="primary" size="small">view</Button>
-                                        </ListItemSecondaryAction>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <PanoramaOutlinedIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary="shots_1_attach_3.png" secondary="Jan 7, 2014" />
-                                        <ListItemSecondaryAction>
-                                            <Button variant="outlined" color="primary" size="small">view</Button>
-                                        </ListItemSecondaryAction>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <VideocamOutlinedIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary="Screen_record_12.mov" secondary="July 20, 2014" />
-                                        <ListItemSecondaryAction>
-                                            <Button variant="contained" style={{ background: "blue", color: "whitesmoke" }} size="small">play</Button>
-                                        </ListItemSecondaryAction>
-                                    </ListItem>
+                                <ListItem >
+                  <ListItemIcon>  
+                   <PanoramaOutlinedIcon/> 
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Shot-1-attach-1.png"
+                  />
+                  <ListItemSecondaryAction  >
+                    <Button size="small" color="primary" variant="outlined">
+                     View
+                    </Button>
+                  </ListItemSecondaryAction>
+                </ListItem>
+                <ListItem >
+                  <ListItemIcon>  
+                   <PanoramaOutlinedIcon/> 
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Shot-1-attach-3.png"
+                  />
+                  <ListItemSecondaryAction >
+                    <Button size="small" color="primary" variant="outlined">
+                     View
+                    </Button>
+                  </ListItemSecondaryAction>
+                </ListItem>
+                <ListItem >
+                  <ListItemIcon>  
+                   <VideocamOutlinedIcon/> 
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Shot-1-attach-3.mov"
+                  />
+                  <ListItemSecondaryAction >
+                    <Button size="small" color="primary" variant="outlined">
+                     View
+                    </Button>
+                  </ListItemSecondaryAction>
+                </ListItem>
+                
                                 </List>
-                                <Button variant="outlined" color="primary" className={classes.pdfbutton1} size="large">View All</Button>
+                                </Grid>
+                                <Grid item>
+                                <Button variant="outlined" color="primary" style={{width:300}} size="large">View All</Button>
+                                </Grid>
+                                </Grid>
                             </div>
                         </Grid>
                     </Grid>
