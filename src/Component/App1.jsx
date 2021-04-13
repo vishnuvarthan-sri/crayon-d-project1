@@ -20,7 +20,7 @@ import TocIcon from '@material-ui/icons/Toc';
 const styles = theme => ({
     root: {
         display: 'flex',
-        background:"white"
+        background:"white",
     },
     openroot:{
         display: 'flex',
@@ -122,7 +122,11 @@ const styles = theme => ({
       },
       listbutton:{
         padding:theme.spacing(2)
-      }
+      },
+      content: {
+        flexGrow: 1,
+        overflow: 'auto',
+      },
 
 
 })
@@ -150,6 +154,7 @@ class App1 extends React.Component {
         return (
             <div className={this.props.open ==="opened" ? classes.openroot : classes.root}>
                 <CssBaseline />
+                <main className={classes.content}>
                 <Container fixed style={{paddingLeft:20}}>
                     <Grid container direction="row" style={{paddingTop:15}}>
                         <Grid item>
@@ -410,7 +415,7 @@ class App1 extends React.Component {
                         </Grid>
                     </Grid>
                 </Container>
-
+                </main>
             </div>
 
         )

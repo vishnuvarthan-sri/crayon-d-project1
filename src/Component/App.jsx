@@ -45,11 +45,17 @@ const styles = theme => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    position: 'relative',
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
     // display: 'flex',
   },
   drawerPaper: {
     width: drawerWidth,
-    background: "#6f03fc"
+    background: "#6f03fc",
+    
   },
   list: {
     marginTop: theme.spacing(5)
