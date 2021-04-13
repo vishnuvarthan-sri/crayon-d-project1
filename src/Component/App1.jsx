@@ -127,6 +127,9 @@ const styles = theme => ({
         flexGrow: 1,
         overflow: 'auto',
       },
+      container:{
+          paddingTop:theme.spacing(2)
+      }
 
 
 })
@@ -155,7 +158,7 @@ class App1 extends React.Component {
             <div className={this.props.open ==="opened" ? classes.openroot : classes.root}>
                 <CssBaseline />
                 <main className={classes.content}>
-                <Container fixed style={{paddingLeft:20}}>
+                <Container fixed className={classes.container}>
                     <Grid container direction="row" style={{paddingTop:15}}>
                         <Grid item>
                         <TocIcon className={classes.marker} onClick={this.props.again} fontSize="large"/>
