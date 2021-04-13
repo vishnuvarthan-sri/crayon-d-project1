@@ -150,7 +150,7 @@ class App1 extends React.Component {
         return (
             <div   className={this.props.open ==="opened" ? classes.openroot : classes.root}>
                 <CssBaseline />
-                <div style={{paddingLeft:20}}>
+                <Container fixed style={{paddingLeft:20}}>
                     <Grid container direction="row" style={{paddingTop:15}}>
                         <Grid item>
                         <TocIcon className={classes.marker} onClick={this.props.again} fontSize="large"/>
@@ -410,7 +410,7 @@ class App1 extends React.Component {
                             </div>
                         </Grid>
                     </Grid>
-                </div>
+                </Container>
 
             </div>
 
