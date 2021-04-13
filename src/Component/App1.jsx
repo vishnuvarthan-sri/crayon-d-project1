@@ -148,7 +148,7 @@ class App1 extends React.Component {
     render() {
         const { classes } = this.props
         return (
-            <div   className={this.props.open ==="opened" ? classes.openroot : classes.root}>
+            <div className={this.props.open ==="opened" ? classes.openroot : classes.root}>
                 <CssBaseline />
                 <Container fixed style={{paddingLeft:20}}>
                     <Grid container direction="row" style={{paddingTop:15}}>
@@ -223,8 +223,8 @@ class App1 extends React.Component {
                             <Divider orientation="vertical" />
                         </div>
                         <Grid item xs={12} sm={12} md={3} lg={3} >
-                              <div className={classes.root1}>
-                                  <Grid container direction="column" spacing={2} >
+                              <div>
+                                  <Grid container direction="column" spacing={2} className={classes.root1} >
                                       <Grid item >
                                 <Typography variant="h1" style={{ fontSize: 20 }}> Report</Typography>
                                 </Grid>
@@ -351,8 +351,7 @@ class App1 extends React.Component {
                             <Divider orientation="vertical" className={classes.Vdivider} />
                         </div> */}
                         <Grid item  xs={12} sm={12} lg={3} md={3} >
-                            <div className={classes.root1}>
-                                <Grid container direction="column" spacing={2}  >
+                                <Grid container direction="column" spacing={2} className={classes.root1} >
                                     <Grid item> 
                                 <Typography variant="h1" style={{ fontSize: 20}}> Screenshots</Typography>
                                 </Grid>
@@ -407,7 +406,7 @@ class App1 extends React.Component {
                                 <Button variant="outlined" color="primary" style={{width:310}} size="large">View All</Button>
                                 </Grid>
                                 </Grid>
-                            </div>
+                            
                         </Grid>
                     </Grid>
                 </Container>
