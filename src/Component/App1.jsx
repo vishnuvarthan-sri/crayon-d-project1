@@ -148,9 +148,9 @@ class App1 extends React.Component {
     render() {
         const { classes } = this.props
         return (
-            <Container fixed   className={this.props.open ==="opened" ? classes.openroot : classes.root}>
+            <div   className={this.props.open ==="opened" ? classes.openroot : classes.root}>
                 <CssBaseline />
-                <div>
+                <div style={{paddingLeft:20}}>
                     <Grid container direction="row" style={{paddingTop:15}}>
                         <Grid item>
                         <TocIcon className={classes.marker} onClick={this.props.again} fontSize="large"/>
@@ -222,7 +222,7 @@ class App1 extends React.Component {
                         <div style={{ marginLeft: 20 }}>
                             <Divider orientation="vertical" />
                         </div>
-                        <Grid item xs={6} sm={6} md={3} lg={3} >
+                        <Grid item xs={12} sm={12} md={3} lg={3} >
                               <div className={classes.root1}>
                                   <Grid container direction="column" spacing={2} >
                                       <Grid item >
@@ -350,7 +350,7 @@ class App1 extends React.Component {
                         {/* <div >
                             <Divider orientation="vertical" className={classes.Vdivider} />
                         </div> */}
-                        <Grid item  xs={6} sm={6} lg={3} >
+                        <Grid item  xs={12} sm={12} lg={3} md={3} >
                             <div className={classes.root1}>
                                 <Grid container direction="column" spacing={2}  >
                                     <Grid item> 
@@ -412,7 +412,7 @@ class App1 extends React.Component {
                     </Grid>
                 </div>
 
-            </Container>
+            </div>
 
         )
     }
