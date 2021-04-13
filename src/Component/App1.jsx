@@ -1,6 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { Paper, withStyles, Grid, Button, List, ListItem, ListItemText, ListItemSecondaryAction, Divider, Select, MenuItem, Typography, ListItemIcon} from '@material-ui/core';
+import { Paper, withStyles, Grid, Button, List, ListItem, ListItemText, ListItemSecondaryAction, Divider, Select, MenuItem, Typography, ListItemIcon, Container} from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -33,8 +33,7 @@ const styles = theme => ({
     },
    
     button: {
-        margin: theme.spacing(1),
-        marginLeft: theme.spacing(107)
+        marginLeft: theme.spacing(105)
     },
    
     paper: {
@@ -43,7 +42,7 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     view: {
-        marginLeft: theme.spacing(60)
+        marginLeft: theme.spacing(55),
     },
     Vdivider: {
         marginLeft: theme.spacing(-23),
@@ -59,14 +58,11 @@ const styles = theme => ({
     grid2: {
         marginTop: theme.spacing(2)
     },
-    leftside: {
-        marginLeft: theme.spacing(-35),
-        marginTop: theme.spacing(25)
-    },
+   
     root1: {
     
-        marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(6),
+        paddingTop: theme.spacing(3),
+        paddingLeft: theme.spacing(6),
        
     },
     root2: {
@@ -152,11 +148,10 @@ class App1 extends React.Component {
     render() {
         const { classes } = this.props
         return (
-            <div className={this.props.open ==="opened" ? classes.openroot : classes.root}>
+            <Container fixed   className={this.props.open ==="opened" ? classes.openroot : classes.root}>
                 <CssBaseline />
-                <div className={classes.text}>
-              
-                    <Grid container direction="row">
+                <div>
+                    <Grid container direction="row" style={{paddingTop:15}}>
                         <Grid item>
                         <TocIcon className={classes.marker} onClick={this.props.again} fontSize="large"/>
                         </Grid>
@@ -186,10 +181,16 @@ class App1 extends React.Component {
                         <Grid item xs={12} sm={12} md={8} lg={8} >
                             <div>
                                 <div style={{display:"flex",alignItems:"center"}}>
+                                   
                                 <h1 >Timesheet</h1>
+                               
                                <Button variant="outlined"
                                         color="primary" className={classes.view}> VIEW FULL SHEET</Button>
-                                    <MoreHorizIcon style={{ marginLeft: 20 }} />
+                                       
+                                        
+                                    <MoreHorizIcon style={{marginLeft:10}} />
+                                   
+                                 
                                 </div>
                                 <TableContainer >
                                     <Table  aria-label="simple table">
@@ -227,7 +228,7 @@ class App1 extends React.Component {
                                       <Grid item >
                                 <Typography variant="h1" style={{ fontSize: 20 }}> Report</Typography>
                                 </Grid>
-                                <Grid item>
+                                <Grid item >
                                 <Paper className={classes.paper1} elevation={3} >
                                     <Grid container spacing={2}>
                                         <Grid item style={{ marginTop: 12 }}>
@@ -258,7 +259,7 @@ class App1 extends React.Component {
                                     </Grid>
                                 </Paper>
                                 </Grid>
-                                <Grid item>
+                                <Grid item >
                                 <Paper className={classes.paper2} elevation={0}>
                                     <Grid container spacing={2}>
                                         <Grid item style={{ marginTop: 12 }}>
@@ -289,7 +290,7 @@ class App1 extends React.Component {
                                     </Grid>
                                 </Paper>
                                 </Grid>
-                                <Grid item >
+                                <Grid item  >
                                 <Button variant="outlined" color="primary" startIcon={<Description />} style={{width:300}} size="large">Export As Pdf</Button> 
                                 </Grid>
                                 </Grid>
@@ -349,7 +350,7 @@ class App1 extends React.Component {
                         {/* <div >
                             <Divider orientation="vertical" className={classes.Vdivider} />
                         </div> */}
-                        <Grid item  xs={6} sm={6} md={3} lg={3} >
+                        <Grid item  xs={6} sm={6} lg={3} >
                             <div className={classes.root1}>
                                 <Grid container direction="column" spacing={2}  >
                                     <Grid item> 
@@ -358,7 +359,7 @@ class App1 extends React.Component {
                                 <Grid item  >
                                    
                                 <List>
-                                <ListItem style={{width:320}}>
+                                <ListItem style={{width:320}} >
                   <ListItemIcon>  
                    <PanoramaOutlinedIcon/> 
                   </ListItemIcon>
@@ -411,7 +412,7 @@ class App1 extends React.Component {
                     </Grid>
                 </div>
 
-            </div>
+            </Container>
 
         )
     }
