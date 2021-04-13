@@ -20,6 +20,7 @@ import TocIcon from '@material-ui/icons/Toc';
 const styles = theme => ({
     root: {
         display: 'flex',
+        background:"white"
     },
     openroot:{
         display: 'flex',
